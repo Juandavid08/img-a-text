@@ -3,7 +3,7 @@ from tkinter import filedialog, messagebox, scrolledtext
 from PIL import Image, ImageTk
 import pytesseract
 
-# Configurar la ruta de Tesseract OCR
+# Configurar la ruta de Tesseract OCR, esto se configura con la instalacion de Tesseract en el equipo
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 class OCRApp:
@@ -131,7 +131,7 @@ class OCRApp:
         Restablece la interfaz a su estado inicial.
         """
         self.text_area.delete(1.0, tk.END)
-        self.image_label.config(image="")  # Limpiar la imagen
+        self.image_label.config(image="")
         self.ruta_imagen = ""
         self.copy_btn.config(state=tk.DISABLED)
         self.save_btn.config(state=tk.DISABLED)
